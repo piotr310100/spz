@@ -70,3 +70,11 @@ install(EXPORT spzTargets
   NAMESPACE spz::
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/spz"
 )
+
+add_executable(gaussian_converter src/main.cpp)
+target_link_libraries(gaussian_converter PRIVATE spz)
+target_include_directories(gaussian_converter PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+install(TARGETS gaussian_converter
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)

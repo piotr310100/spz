@@ -197,7 +197,7 @@ float norm(const Vec3f &a);
 
 // Quaternion helpers.
 float norm(const Quat4f &q);
-Quat4f normalized(const Quat4f &v);
+constexpr Quat4f normalized(const Quat4f &v);
 Quat4f axisAngleQuat(const Vec3f &scaledAxis);
 
 // Constexpr helpers.
